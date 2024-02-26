@@ -24,14 +24,12 @@ struct SUM<matrix_line<line1...>, matrix_line<line2...>> {
 //-------------------------------------------------------------------
 
 //-------------------------PRINT-------------------------------------
-template<typename T>
-std::iostream& print(std::iostream &where, const T& what) {
-    return (where << what);
-}
 
-template<typename T, typename... Types>
-std::iostream print(std::iostream where, const T& what, const Types&... other) {
-    return print(where << what << ' ', other...);
+template<int Head, int... Tail>
+void print() {
+    std::cout << Head << ' ';
+
+    if (sizeof...(Tail)) print(Tail);
 }
 //-------------------------------------------------------------------
 
