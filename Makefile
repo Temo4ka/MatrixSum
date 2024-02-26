@@ -1,2 +1,2 @@
 all:
-	g++ ./src/main.cpp ./src/matrix.cpp -o ./run_file/run.exe
+	g++ ./src/main.cpp -o ./run_file/run.exe
